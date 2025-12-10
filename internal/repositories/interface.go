@@ -6,4 +6,5 @@ type ICategoryRepository interface {
 	// Define os métodos que o repositório deve implementar
 	Save(category *entities.Category) error
 	List() ([]*entities.Category, error)
+	Delete(id int) error
 }

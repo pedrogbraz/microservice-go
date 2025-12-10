@@ -20,5 +20,9 @@ func CategoryRoutes(router *gin.Engine) {
 		categoryRoutes.GET("/", func(ctx *gin.Context) {
 			controllers.ListCategories(ctx, inMemoryCategoryRepository)
 		})
+
+		categoryRoutes.DELETE("/:id", func(ctx *gin.Context) {
+			controllers.DeleteCategory(ctx, inMemoryCategoryRepository)
+		})
 	}
 }
